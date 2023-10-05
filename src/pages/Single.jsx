@@ -2,6 +2,7 @@ import React from 'react';
 import Edit from '../img/edit.png';
 import Delete from '../img/delete.png';
 import { Link } from 'react-router-dom';
+import Menu from '../components/Menu';
 
 function Single() {
   return (
@@ -47,7 +48,7 @@ function Single() {
           aperiam dolorum!
         </p>
       </div>
-      <div className="menu">menu</div>
+      <Menu />
     </div>
   );
 }

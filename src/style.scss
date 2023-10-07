@@ -296,6 +296,15 @@ $lightGrean: #b9e7e7;
 
       .content {
         flex: 5;
+
+        input {
+          width: 99%;
+          height: 30px;
+        }
+
+        .editContainer {
+          margin-top: 20px;
+        }
       }
 
       .menu {

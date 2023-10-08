@@ -28,7 +28,21 @@ function Write() {
             <button>Upload</button>
           </div>
         </div>
-        <div className="item2">item2</div>
+        <div className="item">
+          <h1>Category</h1>
+          <input type="radio" name="cat" value="art" id="art" />
+          <label htmlFor="art">ART</label>
+          <input type="radio" name="cat" value="art" id="art" />
+          <label htmlFor="sciense">sciense</label>
+          <input type="radio" name="cat" value="sciense" id="sciense" />
+          <label htmlFor="art">ART</label>
+          <input type="radio" name="cat" value="art" id="art" />
+          <label htmlFor="art">ART</label>
+          <input type="radio" name="cat" value="art" id="art" />
+          <label htmlFor="art">ART</label>
+          <input type="radio" name="cat" value="art" id="art" />
+          <label htmlFor="art">ART</label>
+        </div>
       </div>
     </div>
   );

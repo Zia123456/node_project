@@ -21,8 +21,12 @@ function Write() {
           <span>
             <b>Visibility: </b>Public
           </span>
-          <input type="text" id="file" name="" />
+          <input style={{ display: 'none' }} type="text" id="file" name="" />
           <label htmlFor="file">Upload Image</label>
+          <div className="buttons">
+            <button>Save as a draft</button>
+            <button>Upload</button>
+          </div>
         </div>
         <div className="item2">item2</div>
       </div>

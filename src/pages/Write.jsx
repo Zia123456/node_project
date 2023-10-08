@@ -13,7 +13,17 @@ function Write() {
         </div>
       </div>
       <div className="menu">
-        <div className="item1">item1</div>
+        <div className="item">
+          <h1>Publish</h1>
+          <span>
+            <b>Status: </b> Draft
+          </span>
+          <span>
+            <b>Visibility: </b>Public
+          </span>
+          <input type="text" id="file" name="" />
+          <label htmlFor="file">Upload Image</label>
+        </div>
         <div className="item2">item2</div>
       </div>
     </div>

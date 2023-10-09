@@ -35,13 +35,14 @@ function Write() {
           <input type="radio" name="cat" value="art" id="art" />
           <label htmlFor="sciense">sciense</label>
           <input type="radio" name="cat" value="sciense" id="sciense" />
-          <label htmlFor="art">ART</label>
-          <input type="radio" name="cat" value="art" id="art" />
-          <label htmlFor="art">ART</label>
-          <input type="radio" name="cat" value="art" id="art" />
-          <label htmlFor="art">ART</label>
-          <input type="radio" name="cat" value="art" id="art" />
-          <label htmlFor="art">ART</label>
+          <label htmlFor="art">Technology</label>
+          <input type="radio" name="cat" value="technology" id="technology" />
+          <label htmlFor="art">Cinema</label>
+          <input type="radio" name="cat" value="cineme" id="cinema" />
+          <label htmlFor="art">Design</label>
+          <input type="radio" name="cat" value="design" id="design" />
+          <label htmlFor="art">Food</label>
+          <input type="radio" name="cat" value="food" id="food" />
         </div>
       </div>
     </div>

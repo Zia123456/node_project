@@ -9,7 +9,12 @@ function Write() {
       <div className="content">
         <input type="text" placeholder="title" />
         <div className="editContainer">
-          <ReactQuill theme="snow" value={value} onChange={setValue} />
+          <ReactQuill
+            className="editor"
+            theme="snow"
+            value={value}
+            onChange={setValue}
+          />
         </div>
       </div>
       <div className="menu">
@@ -22,7 +27,9 @@ function Write() {
             <b>Visibility: </b>Public
           </span>
           <input style={{ display: 'none' }} type="text" id="file" name="" />
-          <label htmlFor="file">Upload Image</label>
+          <label className="file" htmlFor="file">
+            Upload Image
+          </label>
           <div className="buttons">
             <button>Save as a draft</button>
             <button>Upload</button>
@@ -30,19 +37,30 @@ function Write() {
         </div>
         <div className="item">
           <h1>Category</h1>
-          <input type="radio" name="cat" value="art" id="art" />
-          <label htmlFor="art">ART</label>
-          <input type="radio" name="cat" value="art" id="art" />
-          <label htmlFor="sciense">sciense</label>
-          <input type="radio" name="cat" value="sciense" id="sciense" />
-          <label htmlFor="art">Technology</label>
-          <input type="radio" name="cat" value="technology" id="technology" />
-          <label htmlFor="art">Cinema</label>
-          <input type="radio" name="cat" value="cineme" id="cinema" />
-          <label htmlFor="art">Design</label>
-          <input type="radio" name="cat" value="design" id="design" />
-          <label htmlFor="art">Food</label>
-          <input type="radio" name="cat" value="food" id="food" />
+          <div className="cat">
+            <input type="radio" name="cat" value="art" id="art" />
+            <label htmlFor="art">ART</label>
+          </div>
+          <div className="cat">
+            <input type="radio" name="cat" value="sciense" id="sciense" />
+            <label htmlFor="sciense">sciense</label>
+          </div>
+          <div className="cat">
+            <input type="radio" name="cat" value="technology" id="technology" />
+            <label htmlFor="technology">Technology</label>
+          </div>
+          <div className="cat">
+            <input type="radio" name="cat" value="cineme" id="cinema" />
+            <label htmlFor="cineme">Cinema</label>
+          </div>
+          <div className="cat">
+            <input type="radio" name="cat" value="design" id="design" />
+            <label htmlFor="design">Design</label>
+          </div>
+          <div className="cat">
+            <input type="radio" name="cat" value="food" id="food" />
+            <label htmlFor="food">Food</label>
+          </div>
         </div>
       </div>
     </div>

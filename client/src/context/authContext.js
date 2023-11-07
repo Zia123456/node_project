@@ -15,13 +15,13 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const logout = async () => {
-    // await axios.post('auth/login');
+    await axios.post('auth/login');
     localStorage.removeItem('user');
     setCurrentUser(null);
   };
 
   useEffect(() => {
-    // localStorage.setItem('user', JSON.stringify(currentUser));
+    localStorage.setItem('user', JSON.stringify(currentUser));
   }, [currentUser]);
 
   return (

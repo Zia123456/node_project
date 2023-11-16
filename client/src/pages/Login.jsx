@@ -13,8 +13,6 @@ function Login() {
   const navigate = useNavigate();
 
   const { login } = useContext(AuthContext);
-  const { currentUser } = useContext(AuthContext);
-  console.log(currentUser);
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));

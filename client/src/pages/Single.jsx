@@ -11,7 +11,8 @@ function Single() {
   const [post, setPost] = useState({});
   const location = useLocation();
   const postId = location.pathname.split('/')[2];
-  const { curentUser } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
+  console.log(currentUser);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,10 +40,10 @@ function Single() {
             alt="Img"
           />
           <div className="info">
-            <span>{curentUser.username}</span>
+            <span>{currentUser.username}</span>
             <p>Posted {moment(post.date).fromNow()}</p>
           </div>
-          {curentUser.username === post.username && (
+          {currentUser.username === post.username && (
             <div className="edit">
               <Link to={`/write?edit=2`}>
                 <img src={Edit} alt="Img" />

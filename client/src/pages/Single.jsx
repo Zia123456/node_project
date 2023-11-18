@@ -39,7 +39,7 @@ function Single() {
             alt="Img"
           />
           <div className="info">
-            <span>{post.username}</span>
+            <span>{curentUser.username}</span>
             <p>Posted {moment(post.date).fromNow()}</p>
           </div>
           {curentUser.username === post.username && (

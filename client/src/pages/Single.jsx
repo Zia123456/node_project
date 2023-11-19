@@ -17,7 +17,7 @@ function Single() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`/posts${postId}`);
+        const res = await axios.get(`/posts/${postId}`);
         if (Array.isArray(res.data)) {
           setPost(res.data);
         } else {
@@ -30,15 +30,13 @@ function Single() {
 
     fetchData();
   }, [postId]);
+  console.log(post);
   return (
     <div className="single">
       <div className="content">
         <img src={post.img} alt="Img" />
         <div className="user">
-          <img
-            src="https://images.pexels.com/photos/6157049/pexels-photo-6157049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-            alt="Img"
-          />
+          {post.userImg && <img src={post.userImg} alt="Img" />}
           <div className="info">
             <span>{currentUser.username}</span>
             <p>Posted {moment(post.date).fromNow()}</p>

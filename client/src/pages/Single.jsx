@@ -18,11 +18,7 @@ function Single() {
     const fetchData = async () => {
       try {
         const res = await axios.get(`/posts/${postId}`);
-        if (Array.isArray(res.data)) {
-          setPost(res.data);
-        } else {
-          console.error('API response is not an array:', res.data);
-        }
+        setPost(res.data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -34,11 +30,11 @@ function Single() {
   return (
     <div className="single">
       <div className="content">
-        <img src={post.img} alt="Img" />
+        <img src={post?.img} alt="Img" />
         <div className="user">
           {post.userImg && <img src={post.userImg} alt="Img" />}
           <div className="info">
-            <span>{currentUser.username}</span>
+            <span>{post.username}</span>
             <p>Posted {moment(post.date).fromNow()}</p>
           </div>
           {currentUser.username === post.username && (

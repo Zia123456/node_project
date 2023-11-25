@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Edit from '../img/edit.png';
 import Delete from '../img/delete.png';
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Menu from '../components/Menu';
 import axios from 'axios';
 import moment from 'moment';
@@ -36,10 +36,15 @@ function Single() {
     }
   };
 
+  const getText = (html) => {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    return doc.body.textContent;
+  };
+
   return (
     <div className="single">
       <div className="content">
-        <img src={post?.img} alt="Img" />
+        <img src={`../upload/${post?.img}`} alt="Img" />
         <div className="user">
           {post.userImg && <img src={post.userImg} alt="Img" />}
           <div className="info">
@@ -48,7 +53,7 @@ function Single() {
           </div>
           {currentUser.username === post.username && (
             <div className="edit">
-              <Link to={`/write?edit=2`}>
+              <Link to={`/write?edit=2`} state={post}>
                 <img src={Edit} alt="Img" />
               </Link>
               <img onClick={handleDelete} src={Delete} alt="Img" />
@@ -56,7 +61,7 @@ function Single() {
           )}
         </div>
         <h1>{post.title}</h1>
-        {post.desc}
+        {getText(post.desc)}
       </div>
       <Menu cat={post.cat} />
     </div>
